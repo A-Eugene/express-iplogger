@@ -1,13 +1,16 @@
+&nbsp;
 ## express-iplogger
 
 A simple IP logger library for Express using ip-api.com
 
 ( Not affiliated )
 
+&nbsp;
 ## Installation:
 
     $ npm install express-iplogger --save
 
+&nbsp;
 ## Usage
 
 You can use the logger by calling the imported logger inside an express route/middleware. The logger result is accessible using the ipinfo object from the request parameter.
@@ -33,6 +36,7 @@ ip-api.com limits the request from an IP address to 45 requests per second, so t
 
 You can set it to 0 to disable caching(not reccomended).
 
+&nbsp;
 ## Options
 | Key      | Description                                                                               | Type   |
 |----------|-------------------------------------------------------------------------------------------|--------|
