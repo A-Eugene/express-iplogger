@@ -1,6 +1,6 @@
 {
   "name": "express-iplogger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple IP logger library for Express using ip-api.com",
   "main": "index.js",
   "scripts": {
