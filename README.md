@@ -4,7 +4,6 @@ A simple IP logger library for Express using ip-api.com
 
 ( Not affiliated )
 
-
 ## Installation:
 
     $ npm install express-iplogger --save
@@ -39,6 +38,7 @@ You can set it to 0 to disable caching(not reccomended).
 |----------|-------------------------------------------------------------------------------------------|--------|
 | cacheAge | How long do you want the API result to be cached in seconds (Set to 0 to disable caching) | number |
 
+&nbsp;
 ## Result (req.ipinfo):
 
 Returns *null* when there's an error. Otherwise:
@@ -68,10 +68,16 @@ Returns *null* when there's an error. Otherwise:
 | proxy         | Proxy, VPN or Tor exit address                                                                              | true                | boolean |
 | hosting       | Hosting, colocated or data center                                                                           | false               | boolean |
 
+&nbsp;
 ## License
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [MIT License](https://opensource.org/licenses/MIT)
+
+
+
+
+
 
 
 
