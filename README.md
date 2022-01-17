@@ -1,19 +1,20 @@
-&nbsp;
 ## express-iplogger
 
 A simple IP logger library for Express using ip-api.com
 
 ( Not affiliated )
 
-&nbsp;
 ## Installation:
 
     $ npm install express-iplogger --save
 
-&nbsp;
 ## Usage
 
 You can use the logger by calling the imported logger inside an express route/middleware. The logger result is accessible using the ipinfo object from the request parameter.
+
+ip-api.com limits the request from an IP address to 45 requests per second, so to avoid getting rate limited here you can specify how long do you want the logger to cache the result from ip-api.com.
+
+You can set it to 0 to disable caching(not reccomended).
 ```js
 const express = require('express');
 const logger = require('express-iplogger');
@@ -32,11 +33,25 @@ app.use((req, res) => {
 app.listen(3000);
 ```
 
-ip-api.com limits the request from an IP address to 45 requests per second, so to avoid getting rate limited here you can specify how long do you want the logger to cache the result from ip-api.com.
+IMPORTANT: If you are running this behind a reverse proxy like nginx you should add add this line of code before you use the logger in the middleware:
 
-You can set it to 0 to disable caching(not reccomended).
+```js
+app.set('trust proxy', true);
+```
 
-&nbsp;
+This line of code will set the req.ip object to either the socketAddress's client IP or the IP from the X-Forwarded-For header. For example in nginx you can do:
+```conf
+server {
+	listen 80;
+
+	location / {
+		proxy_set_header X-Forwarded-For $remote_addr;
+		proxy_pass http://localhost:3000/;
+	}
+}
+```
+
+
 ## Options
 | Key      | Description                                                                               | Type   |
 |----------|-------------------------------------------------------------------------------------------|--------|
