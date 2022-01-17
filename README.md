@@ -72,6 +72,7 @@ Returns *null* when there's an error. Otherwise:
 
 | Key           | Description                                                                                                 | Example             | Type    |
 |---------------|-------------------------------------------------------------------------------------------------------------|---------------------|---------|
+| IP			| The client's IP address | 139.56.37.243  | string
 | continent     | Continent name                                                                                              | North America       | string  |
 | continentCode | Two-letter continent code                                                                                   | NA                  | string  |
 | country       | Country name                                                                                                | United States       | string  |

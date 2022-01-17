@@ -16,6 +16,7 @@ module.exports = (arg = { cacheAge: 0 }) => {
     await axios.get(`http://ip-api.com/json/${ip}?fields=continent,continentCode,country,countryCode,region,regionName,city,offset,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting`)
       .then(result => {
         let { data } = result;
+        data.IP = ip;
 
         req.ipinfo = data;
         
