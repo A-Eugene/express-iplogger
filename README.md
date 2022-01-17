@@ -51,6 +51,14 @@ server {
 }
 ```
 
+&nbsp;
+**Full explanation:**
+1. Nginx forwards the client IP($remote_addr) to the express webserver behind the proxy by adding the X-Forwarded-For header
+2. By setting 'trust proxy' in express app to true, you are "trusting" the proxy's X-Forwarded-For header. Therefore, express sets the req.ip object to X-Forwarded-For header if exists, else it'll just return the reverse proxy's IP
+3. This req.ip object is required in order for the middleware to work. That is the way this library retrieves the IP.
+
+&nbsp;
+**Warning: setting 'trust proxy' to true will trust any X-Forwarded-For header including the one from the client! Only enable this option when using a reverse proxy!**
 
 ## Options
 | Key      | Description                                                                               | Type   |
