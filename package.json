@@ -1,6 +1,6 @@
 {
   "name": "express-iplogger",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple IP logger library for Express using ip-api.com",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "type": "git",
     "url": "https://github.com/A-Eugene/express-iplogger.git"
   },
+  "readme": "README.md",
   "author": "AEugene",
   "license": "MIT",
   "dependencies": {
