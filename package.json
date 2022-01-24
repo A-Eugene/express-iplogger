@@ -1,6 +1,6 @@
 {
   "name": "express-iplogger",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple IP logger library for Express using ip-api.com",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,6 @@
   "author": "AEugene",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.24.0",
-    "express": "^4.17.2"
+    "axios": "^0.24.0"
   }
 }
